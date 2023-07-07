@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    scroll-behavior: smooth;
+
+}
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+a:hover{
+    text-decoration: none;
+    color: #fff
+}
+body{
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+    color:#fff
+
+}
+.mainContent{
+    height:105vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mainheading{
+    font-size:80px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+    display: inline-block
+}
+
+.mainheading span{
+    color:#04e213;
+}
+
+.mainContent .btn{
+    padding: 10px 40px;
+}
+/*
+button
+*/
+
+/* 4 */
+.btn-4 {
+  color: #8ce436;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color:#fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #8ce436;
+  box-shadow: 0 0 5px #8ce436, 0 0 5px inset;
+}
+.btn-4:after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 6px;
+  bottom:5px;
+  width: 90%;
+  height: 70%;
+  border: 1px solid #8ce436;
+  box-shadow: 0 0 5px #8ce436 inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.btn-4:hover:after {
+  opacity: 1;  color:#fff;
+  text-decoration: none;
+}
+.btn-4:hover{
+    color:#fff;
+  text-decoration: none;
+}
+.custom-btn {
+  color: #fff;
+  width: 170px;
+  height: 40px;
+  padding: 10px 25px;  color:#fff;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.selectlinks{
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0 0 10px 5px rgba(30, 29, 29, 0.769);
+    font-size:18px;
+    padding: 10px;
+}
+.mytext{
+  background: transparent;
+  box-shadow: 0 0 10px 5px rgba(30, 29, 29, 0.769);
+  
+}
+.card-section{
+    display:flex;justify-content:center;min-height:50vh
+}
+
+.card-div{
+    background-color:black;border-color:#04e213;
+box-shadow: 0px -2px 11px 0px rgba(98,255,5,0.73);
+-webkit-box-shadow: 0px -2px 11px 0px rgba(98,255,5,0.73);
+-moz-box-shadow: 0px -2px 11px 0px rgba(98,255,5,0.73);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fade-in.active {
+    opacity: 1;
+  }
+
+
+  
+  .form-control{
+    background: transparent !important;
+    box-shadow: 0 0 10px 5px rgba(30, 29, 29, 0.769);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #04e213 !important;
+    border-radius: 8px !important;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #05820d !important;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f5f5f5 !important;
+    border-radius: 8px;
+  }
+  

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/themes/prism.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.4.0/themes/prism-vsc-dark-plus.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/atom-one-dark.min.css" />
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+#typed-text {
+  display: inline-block;
+}
+
+
+/* 4 */
+.btn-4 {
+  color: #8ce436;
+  padding: 0;
+  border: 1px solid #8ce436;
+  box-shadow: 0 0 5px #8ce436, 0 0 5px inset;
+}
+.btn-4:after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 6px;
+  width: 90%;
+  height: 70%;
+  border: 1px solid #8ce436;
+  box-shadow: 0 0 5px #8ce436 inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.btn-4:hover:after {
+  opacity: 1;
+}
+
+.custom-btn {
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+
+.mainDiv{
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    transform: translatey(100%);
+  justify-content: center;
+  align-items: center !important;
+}
+p{
+    font-size: 50px;
+}
+
+
+    </style>
+</style>
+</head>
+<body>
+
+    <body>
+
+
+<div class="mainDiv">
+  <button id="start-typing" class="btn-4 custom-btn">Start Typing</button>
+  <div>
+    <p id="typed-text"> </p>
+  </div>
+</div>
+
+
+
+
+<div>
+    <h1>Code Example</h1>
+    <pre><code id="myCode" class="language-javascript ">
+      function greet(name) {
+        console.log("Hello, " + name + "!");
+      }
+
+      greet("World");
+    </code></pre>
+    <!-- <script>
+      Prism.highlightAll();
+    </script> -->
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>
+// Get the code element and its text content
+const codeElement = document.querySelector('pre code[class*="language-"]');
+const codeText = codeElement.textContent;
+
+codeElement.textContent = '';
+
+const codeChars = codeText.split('');
+
+let currentCharIndex = 0;
+
+function addNextChar() {
+  const currentChar = codeChars[currentCharIndex];
+  
+  codeElement.textContent += currentChar;
+  
+  currentCharIndex++;
+  
+  if (currentCharIndex < codeChars.length) {
+    setTimeout(addNextChar, 50);
+  }
+}
+
+setTimeout(addNextChar, 500);
+Prism.highlightAll();
+    // function startTyping() {
+    //   const typedText = new Typed('#typed-text', {
+    //     strings: ['Hello, world!', 'Welcome to my website!', 'This is a typing effect.'],
+    //     typeSpeed: 50,
+    //     loop: true
+    //   });
+    // }
+
+    // const startButton = document.getElementById('start-typing');
+    // startButton.addEventListener('click', startTyping);
+  </script>
+</body>
+
+
+</body>
+</html>

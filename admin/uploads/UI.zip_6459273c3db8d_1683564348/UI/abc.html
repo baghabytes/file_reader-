@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.4.0/themes/prism-vsc-dark-plus.min.css" />
+
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+        
+            * {
+          padding: 0;
+          margin: 0;
+        }
+        
+        body {
+            background-color: #2b2b2b;
+              font-family: 'Work Sans', sans-serif;
+          color: #f8f8f2;
+            }
+            
+            pre {
+          background-color: #2b2b2b;
+          color: #f8f8f2;
+          font-size: 14px;
+          padding: 20px;box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+          margin:20px;
+          min-height: 80vh !important;
+          font-family: 'Source Code Pro', monospace;
+          overflow-x: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+      
+        pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+
+
+        </style>
+        
+</head>
+<body>
+
+<div class="mainDiv" style="text-align: center;margin-top: 5%;">
+    <h1>This is Main Heading</h1><br/>
+</div>
+    <pre id="code" class="line-numbers">
+const highlightedText = Prism.highlight(addText, Prism.languages.js);
+var app = document.getElementById("code");
+var typewriter = new Typewriter(app, {
+    loop: false,
+    delay: 75
+});
+function typeWriter() {
+    typewriter.typeString(highlightedText).start();
+}
+document.querySelector("#run").addEventListener("click", typeWriter);
+        </pre>
+
+
+
+        
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+<script>
+let x = document.getElementById('code');
+let addText = x.textContent;
+x.textContent = "";
+
+
+const highlightedText = Prism.highlight(addText, Prism.languages.js);
+var app = document.getElementById("code");
+
+var typewriter = new Typewriter(app, {
+  loop: false,
+  delay: 75
+});
+
+function typeWriter() {
+  typewriter.typeString(highlightedText).start();
+}
+
+typeWriter()
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+      
